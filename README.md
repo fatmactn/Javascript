@@ -1,1 +1,3 @@
 # Javascript
+
+Basic javaScript examples.
