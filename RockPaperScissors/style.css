@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: rgb(98, 6, 126);
+    overflow: hidden;
+}
+
+.game {
+    min-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.8s ease-in;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.result {
+    font-size: 2rem;
+}
+
+.score {
+    min-height: 40vh;
+    width: 40vw;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    background: rgba(130, 15, 168, 0.4);
+    border-radius: 10px;
+}
+
+.display-score {
+    width: 30vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.player-score,
+.computer-score {
+    text-align: center;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 3rem;
+}
+
+.buttons {
+    min-height: 10vh;
+    width: 40vw;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: space-around;
+}
+
+button {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.5s ease;
+    outline: none;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.images {
+    min-height: 20vh;
+    min-width: 20vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+img {
+    height: 200px;
+    margin-top: 50px;
+}
+
+.computer-image {
+    transform: rotateY(180deg);
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.8s ease-in;
+    pointer-events: all;
+}
+
+.modal button {
+    font-size: 2rem;
+}
+
+.reveal {
+    opacity: 1;
+}
+
+.disablebuttons {
+    pointer-events: none;
+}
+
+.move {
+    animation: animation 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes animation {
+    from {
+        transform: translateY(50px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
